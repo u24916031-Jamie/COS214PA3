@@ -40,7 +40,7 @@ OBJS=$(patsubst src/%,obj/%,$(OBJSTEMP))
 all: $(TARGET) run
 
 
-$(TARGET): $(OBJS) $(SRCS)
+$(TARGET): $(OBJS) $(SRCS) |bin
 	$(CXX) $(CXXFLAGS) -o bin/$(TARGET) $(OBJS)
 
 
@@ -48,7 +48,7 @@ obj/%.o: src/%.cpp | obj/$(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
-run: $(TARGET) $(SRCS) $(OBJS)
+run: $(TARGET) $(SRCS) $(OBJS) 
 	./bin/$(TARGET)
 
 clean:
@@ -61,4 +61,7 @@ valgrind:$(TARGET) $(SRCS) $(OBJS)
 #create directory if needed
 obj/$(OBJ_DIR):
 	mkdir -p obj/$(OBJ_DIR)
+
+bin:
+	mkdir -p bin
 	
