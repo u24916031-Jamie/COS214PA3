@@ -6,7 +6,7 @@
 
 
 class Subject {
-private:
+protected:
 	std::vector<Observer*> observerList;
 
 public:
@@ -17,24 +17,7 @@ public:
 	}
 
 
-	void attach(Observer* observer) {
-		for (size_t i = 0;i < observerList.size();i++) {
-			if (observerList[i] == observer) {
-				return;
-			}
-		}
-		observerList.push_back(observer);
-	}
-	void detach(Observer* observer) {
-		for (size_t i = 0;i < observerList.size();i++) {
-			if (observerList[i] == observer) {
-				std::vector<Observer*>::iterator it;
-				it += i;
-				observerList.erase(it);
-				return;
-			}
-		}
-	}
+
 
 
 };
