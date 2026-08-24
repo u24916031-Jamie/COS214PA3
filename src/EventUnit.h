@@ -6,11 +6,11 @@
 class EventUnit : public EventComponent {
 
 public:
-	EventUnit() = delete;
 	/**
 	 * @brief Constructor for EventUnit
 	 * */
-	EventUnit(int capacity) : EventComponent(capacity) {};
+	EventUnit() : EventComponent(-1) {};
+
 
 	/**
  * @brief Destructor
