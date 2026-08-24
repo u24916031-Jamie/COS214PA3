@@ -5,7 +5,6 @@
 #include "Subject.h"
 #include <string>
 #include "PlayerObserver.h"
-
 struct PlayerState {
 	std::string name;
 	int holesPlayed = 0;
@@ -47,7 +46,7 @@ public:
 			if (observerList[i] == observer) {
 				std::vector<Observer*>::iterator it;
 				it += i;
-				observer->deregisterPlayer();
+				observer->deregisterPlayer(this);
 				observerList.erase(it);
 				return;
 			}
