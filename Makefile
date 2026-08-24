@@ -6,9 +6,10 @@
 
 # Target executable, default name
 TARGET= eventflow
-
+SUBDIRS  := Checkpointing Pipeline_Lifecycle Source_Connectors Transformations
+INC_FLAGS := $(addprefix -I, $(SUBDIRS))
 # Compiler flags
-CXXFLAGS = -std=c++11 -Wall -Werror
+CXXFLAGS = -std=c++11 -Wall -Werror -I. $(INC_FLAGS)
 
 ##DO NOT TOUCH----------------------------------------------------------------------
 
