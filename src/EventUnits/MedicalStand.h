@@ -10,7 +10,7 @@ public:
 	/**
 	 * @brief Constructor for MedicalStand
 	 * */
-	MedicalStand(int capacity) : EventUnit(capacity) {};
+	MedicalStand(int capacity) : EventUnit(capacity, Other) {};
 
 	/**
  * @brief Destructor

@@ -10,7 +10,7 @@ public:
 	/**
 	 * @brief Constructor for FoodStall
 	 * */
-	FoodStall(int capacity) : EventUnit(capacity) {};
+	FoodStall(int capacity) : EventUnit(capacity, Other) {};
 
 	/**
  * @brief Destructor

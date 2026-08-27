@@ -2,6 +2,8 @@
 #define GOLFCOURSE_H
 
 #include "EventGroup.h"
+#include "PlayerTent.h"
+
 
 class GolfCourse : public EventGroup {
 
@@ -11,6 +13,10 @@ public:
 	 * @brief Constructor for GolfCourse
 	 * */
 	GolfCourse(int capacity) : EventGroup(capacity) {};
+
+
+
+
 
 	/**
  * @brief Destructor

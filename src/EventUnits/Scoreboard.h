@@ -15,7 +15,7 @@ public:
 	/**
 	 * @brief Constructor for Scoreboard
 	 * */
-	Scoreboard(int capacity) : EventUnit() {};
+	Scoreboard(int capacity) : EventUnit(capacity, Other) {};
 
 	/**
  * @brief Destructor

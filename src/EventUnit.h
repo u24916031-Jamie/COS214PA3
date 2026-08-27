@@ -3,14 +3,22 @@
 
 #include "EventComponent.h"
 
-class EventUnit : public EventComponent {
+enum EventUnitType {
+	GolfHoleUnit, Other
+};
 
+
+class EventUnit : public EventComponent {
+private:
+	EventUnitType type;
 public:
 	EventUnit() = delete;
 	/**
 	 * @brief Constructor for EventUnit
 	 * */
-	EventUnit(int capacity) : EventComponent(capacity) {};
+	EventUnit(int capacity, EventUnitType type) : EventComponent(capacity) {
+		this->type = type;
+	};
 
 	/**
  * @brief Destructor

@@ -10,7 +10,7 @@ public:
 	/**
 	 * @brief Constructor for WeatherMeter
 	 * */
-	SpectatorArea(int capacity) : EventUnit(capacity) {};
+	SpectatorArea(int capacity) : EventUnit(capacity, Other) {};
 
 	/**
  * @brief Destructor

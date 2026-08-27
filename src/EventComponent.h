@@ -5,6 +5,7 @@ enum EventStatus {
 };
 #include <string>
 #include "Notifications.h"
+#include "PlayerTent.h"
 /**
  *
  * @brief Component class of Composite Design pattern
@@ -71,5 +72,6 @@ public:
 
 
 	virtual void HandleNotification(Notifications notif) = 0;
+	virtual void SetPlayerTent(PlayerTent* tent) = 0;
 };
 #endif
