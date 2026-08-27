@@ -1,0 +1,16 @@
+#ifndef NOTIFICATIONS_H
+#define NOTIFICATIONS_H
+enum Notifications {
+	CLEAR,
+	THUNDER,
+	RAIN,
+	OPEN,
+	CLOSE,
+	PAUSE,
+	RESUME,
+	EVACUATE,
+	CAPACITYFULL
+
+};
+
+#endif
