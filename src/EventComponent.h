@@ -13,12 +13,11 @@ enum EventStatus {
  */
 class EventComponent {
 protected:
-	EventComponent(int capacity) : capacity(capacity) {};
+	EventComponent() {};
 private:
 
 	EventStatus status = CLOSED;
-	int capacity;
-	int size;
+
 
 public:
 	EventComponent() = delete;
@@ -38,21 +37,21 @@ public:
 	virtual EventStatus reportStatus() const {
 		return status;
 	}
+
+	virtual void setStatus(EventStatus status) {
+		this->status = status;
+	}
 	/**
 * @brief Gets current capacity
 * @return int current capacity  of component
 */
-	virtual int getCapacity()const {
-		return capacity;
-	}
+	virtual int getCapacity()const = 0;
 
 	/**
 	 * @brief Gets current unmber of people in component
 	 * @return int current unmber of people in component
 	 * */
-	virtual int getSize() const {
-		return size;
-	}
+	virtual int getSize() const = 0;
 
 	/**
 		 * @brief Adds a component as a child
@@ -72,6 +71,7 @@ public:
 
 
 	virtual void HandleNotification(Notifications notif) = 0;
-	virtual void SetPlayerTent(PlayerTent* tent) = 0;
+	virtual void SetPlayerTent(PlayerTent* tent) {};
+
 };
 #endif

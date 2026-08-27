@@ -10,7 +10,7 @@ public:
 	/**
 	 * @brief Constructor for ShoppingArea
 	 * */
-	ShoppingArea(int capacity) : EventGroup(capacity) {};
+	ShoppingArea() : EventGroup() {};
 
 	/**
  * @brief Destructor

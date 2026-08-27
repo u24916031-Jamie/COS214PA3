@@ -11,20 +11,27 @@ enum EventUnitType {
 class EventUnit : public EventComponent {
 private:
 	EventUnitType type;
+	int capacity;
+	int size = 0;
 public:
 	EventUnit() = delete;
 	/**
 	 * @brief Constructor for EventUnit
 	 * */
-	EventUnit(int capacity, EventUnitType type) : EventComponent(capacity) {
-		this->type = type;
-	};
+	EventUnit(int capacity, EventUnitType type) : EventComponent(), capacity(capacity), type(type) {};
 
 	/**
  * @brief Destructor
  * */
 	virtual ~EventUnit() {};
+	virtual int getCapacity()const {
+		return capacity;
+	}
 
+
+	virtual int getSize() const {
+		return size;
+	}
 
 	virtual void HandleNotification(Notifications notif) {
 		// do nothing

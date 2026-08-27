@@ -12,7 +12,7 @@ public:
 	/**
 	 * @brief Constructor for GolfCourse
 	 * */
-	GolfCourse(int capacity) : EventGroup(capacity) {};
+	GolfCourse() : EventGroup() {};
 
 
 

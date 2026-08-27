@@ -10,7 +10,7 @@ public:
 	/**
 	 * @brief Constructor for Entrance
 	 * */
-	Entrance(int capacity) : EventGroup(capacity) {};
+	Entrance() : EventGroup() {};
 
 	/**
  * @brief Destructor
