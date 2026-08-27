@@ -72,6 +72,13 @@ public:
 		}
 	};
 
+	virtual void HandleNotification(Notifications notif) {
+		for (auto child : children) {
+			child->HandleNotification(notif);
+		}
+	}
+
+
 };
 
 

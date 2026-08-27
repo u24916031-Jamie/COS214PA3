@@ -17,6 +17,10 @@ public:
  * */
 	virtual ~EventUnit() {};
 
+
+	virtual void HandleNotification(Notifications notif) {
+		// do nothing
+	}
 };
 
 #endif

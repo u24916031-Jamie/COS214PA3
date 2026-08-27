@@ -1,7 +1,10 @@
 #ifndef EVENTCOMPONENT_H
 #define EVENTCOMPONENT_H
-
+enum EventStatus {
+	OPEN, CLOSED, PAUSED
+};
 #include <string>
+#include "Notifications.h"
 /**
  *
  * @brief Component class of Composite Design pattern
@@ -12,7 +15,7 @@ protected:
 	EventComponent(int capacity) : capacity(capacity) {};
 private:
 
-	std::string status = "closed";
+	EventStatus status = CLOSED;
 	int capacity;
 	int size;
 
@@ -31,7 +34,7 @@ public:
 * @brief Gets current status
 * @return current status of component
 */
-	virtual std::string reportStatus() const {
+	virtual EventStatus reportStatus() const {
 		return status;
 	}
 	/**
@@ -65,5 +68,8 @@ public:
 	 * @brief Destructor
 	 * */
 	virtual ~EventComponent() {};
+
+
+	virtual void HandleNotification(Notifications notif) = 0;
 };
 #endif

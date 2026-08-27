@@ -1,7 +1,6 @@
 
-//Include format: #include "EventGroups/testing.h"
+//Include format: #include "testing.h"
 
-int main()
-{
-    return 0;
+int main() {
+	return 0;
 }
