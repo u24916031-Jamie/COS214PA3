@@ -6,11 +6,10 @@
 class Entrance : public EventGroup {
 
 public:
-	Entrance() = delete;
 	/**
 	 * @brief Constructor for Entrance
 	 * */
-	Entrance(int capacity) : EventGroup(capacity) {};
+	Entrance() : EventGroup() {};
 
 	/**
  * @brief Destructor

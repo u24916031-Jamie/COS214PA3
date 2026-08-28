@@ -10,7 +10,7 @@ public:
 	/**
 	 * @brief Constructor for MerchShop
 	 * */
-	MerchShop(int capacity) : EventUnit(capacity) {};
+	MerchShop(int capacity) : EventUnit(capacity, Other) {};
 
 	/**
  * @brief Destructor

@@ -10,7 +10,7 @@ public:
 	/**
 	 * @brief Constructor for SecurityCheckpoint
 	 * */
-	SecurityCheckpoint(int capacity) : EventUnit(capacity) {};
+	SecurityCheckpoint(int capacity) : EventUnit(capacity, Other) {};
 
 	/**
  * @brief Destructor

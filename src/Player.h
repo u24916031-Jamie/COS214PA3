@@ -1,26 +1,25 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "EventUnit.h"
 #include "Subject.h"
 #include <string>
 #include "PlayerObserver.h"
-struct PlayerState {
-	std::string name;
-	int holesPlayed = 0;
-	int score = 0;
-};
 
-class Player : public EventUnit, public Subject {
+#include "PlayerState.h"
+
+class GolfHole;
+
+class Player :public Subject {
 private:
 	PlayerState state;
+	GolfHole* currentHole;
 
 public:
 	Player() = delete;
 	/**
 	 * @brief Constructor for Player
 	 * */
-	Player(std::string name) : EventUnit() {
+	Player(std::string name) : Subject() {
 		state.name = name;
 	};
 
@@ -66,14 +65,10 @@ public:
 	}
 
 
-	void finishHole(int score) {
-		if (state.holesPlayed == 18) {
-			return;
-		}
-		state.score += score;
-		state.holesPlayed++;
-	}
+	void finishHole(int score);
 
+	void beginHole(GolfHole* hole);
+	void leaveHole();
 
 };
 

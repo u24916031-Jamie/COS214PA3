@@ -22,7 +22,7 @@ public:
 	/**
 	 * @brief Constructor for WeatherMeter
 	 * */
-	WeatherMeter(int capacity) : EventUnit(capacity) {};
+	WeatherMeter(int capacity) : EventUnit(capacity, Other) {};
 
 	/**
  * @brief Destructor

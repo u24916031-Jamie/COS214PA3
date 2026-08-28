@@ -5,6 +5,9 @@
 #include "EventComponent.h"
 #include <vector>
 
+
+
+
 class EventGroup : public EventComponent {
 
 
@@ -12,10 +15,21 @@ private:
 	std::vector<EventComponent*> children = {};
 
 public:
-	EventGroup() = delete;
-	EventGroup(int capacity) : EventComponent(capacity) {};
+	EventGroup() : EventComponent() {};
 
+	virtual int getCapacity()const {
+		int capacity = 0;
+		for (auto child : children) {
+			capacity += child->getCapacity();
+		}
+	}
 
+	virtual int getSize() const {
+		int size = 0;
+		for (auto child : children) {
+			size += child->getSize();
+		}
+	}
 
 	/**
  * @brief handles OPEN order
@@ -75,6 +89,11 @@ public:
 	virtual void HandleNotification(Notifications notif) {
 		for (auto child : children) {
 			child->HandleNotification(notif);
+		}
+	}
+	virtual void SetPlayerTent(PlayerTent* tent) {
+		for (auto child : children) {
+			child->SetPlayerTent(tent);
 		}
 	}
 

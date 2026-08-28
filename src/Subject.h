@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "Observer.h"
-
+#include <iostream>
 
 class Subject {
 protected:
@@ -11,7 +11,8 @@ protected:
 
 public:
 	virtual void notify() {
-		for (size_t i = 0;i < observerList.size();i++) {
+		for (std::size_t i = 0;i < observerList.size();i++) {
+			std::cout << "Updating observer: " << i << '\n';
 			observerList[i]->update();
 		}
 	}
