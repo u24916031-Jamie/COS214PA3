@@ -8,6 +8,9 @@
 #include "Player.h"
 #include "PlayerObserver.h"
 #include "Scoreboard.h"
+
+
+#include <iostream>
 int main() {
 
 
@@ -37,6 +40,7 @@ int main() {
 	Player scottie("Scottie Sheffler");
 	PlayerObserver* manager = new PlayerObserver();
 
+	manager->attach(scoreboard1);
 
 	scottie.attach(manager);
 
@@ -46,7 +50,8 @@ int main() {
 
 	scottie.leaveHole();
 
-
+	std::cout << "Hello!!" << std::endl;
+	std::cout << scoreboard1->printScores() << std::endl;
 
 
 	return 0;

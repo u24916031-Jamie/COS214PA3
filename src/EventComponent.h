@@ -1,11 +1,11 @@
 #ifndef EVENTCOMPONENT_H
 #define EVENTCOMPONENT_H
 enum EventStatus {
-	OPEN, CLOSED, PAUSED
+	OPENED, CLOSED, PAUSED
 };
 #include <string>
 #include "Notifications.h"
-#include "PlayerTent.h"
+class PlayerTent;
 /**
  *
  * @brief Component class of Composite Design pattern

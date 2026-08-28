@@ -3,10 +3,12 @@
 
 #include "Observer.h"
 #include "EventUnit.h"
-#include "PlayerObserver.h"
-
+#include "PlayerState.h"
+#include <iostream>
+#include <string>
+#include <sstream>
+class PlayerObserver;
 class Scoreboard : public EventUnit, public Observer {
-	friend PlayerObserver;
 private:
 	PlayerObserver* playerObserver;
 	std::vector<PlayerState> playerScores;
@@ -35,6 +37,18 @@ public:
 	void update() {
 		playerScores = playerObserver->getState();
 	}
+
+
+	std::string printScores() {
+		std::stringstream ss;
+		for (auto score : playerScores) {
+			ss << score.name << " " << score.score << " Through: " << score.holesPlayed << '\n';
+		}
+		return ss.str();
+	}
+
+
+
 };
 
 #endif

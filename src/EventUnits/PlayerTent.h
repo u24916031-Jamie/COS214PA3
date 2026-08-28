@@ -4,8 +4,7 @@
 
 #include "EventUnit.h"
 #include <vector>
-#include "Player.h"
-
+class Player;
 class PlayerTent : public EventUnit {
 private:
 	std::vector<Player*> players;
@@ -33,21 +32,7 @@ public:
 			}
 		}
 	}
-	std::vector<Player*> getPlayersOnHole(int hole) {
-		std::vector<Player*> retPlayers;
-
-		for (int i = 0;i < players.size();i++) {
-			if (players[i]->getState().holesPlayed == hole) {
-				retPlayers.push_back(players[i]);
-			}
-		}
-		for (auto player : players) {
-			removePlayer(player);
-		}
-
-
-		return retPlayers;
-	}
+	std::vector<Player*> getPlayersOnHole(int hole);
 };
 
 #endif

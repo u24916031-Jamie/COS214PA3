@@ -4,14 +4,10 @@
 #include "Subject.h"
 #include <string>
 #include "PlayerObserver.h"
-#include "GolfHole.h"
-struct PlayerState {
-	std::string name;
-	int holesPlayed = 0;
-	int score = 0;
-	int par = 0;
 
-};
+#include "PlayerState.h"
+
+class GolfHole;
 
 class Player :public Subject {
 private:
@@ -69,25 +65,10 @@ public:
 	}
 
 
-	void finishHole(int score) {
-		if (state.holesPlayed == 18) {
-			return;
-		}
-		state.score += score;
-		state.par += currentHole->getPar();
-		state.holesPlayed++;
-		notify();
-	}
+	void finishHole(int score);
 
-	void beginHole(GolfHole* hole) {
-		currentHole = hole;
-		hole->addPlayer(this);
-	}
-	void leaveHole() {
-		currentHole->removePlayer(this);
-		currentHole = nullptr;
-
-	}
+	void beginHole(GolfHole* hole);
+	void leaveHole();
 
 };
 

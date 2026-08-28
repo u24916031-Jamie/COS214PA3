@@ -11,7 +11,7 @@ enum EventUnitType {
 class EventUnit : public EventComponent {
 private:
 	EventUnitType type;
-	int capacity;
+	int capacity = 0;
 	int size = 0;
 public:
 	EventUnit() = delete;
@@ -38,7 +38,7 @@ public:
 	}
 
 	virtual void open() {
-		status = EventStatus::OPEN;
+		status = EventStatus::OPENED;
 	};
 
 	virtual void close() {

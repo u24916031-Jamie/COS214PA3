@@ -33,6 +33,16 @@ public:
 		return holeNumber;
 	}
 
+
+	virtual void open() {
+		status = EventStatus::OPENED;
+	};
+
+	virtual void close() {
+		status = EventStatus::CLOSED;
+
+	};
+
 	void addPlayer(Player* player) {
 		for (int i = 0;i < players.size();i++) {
 			if (players[i] == player) {
@@ -51,33 +61,15 @@ public:
 			}
 		}
 	}
-	virtual void SetPlayerTent(PlayerTent* tent) {
+	void SetPlayerTent(PlayerTent* tent) {
 		this->tent = tent;
 	}
 
-	virtual void HandleNotification(Notifications notif) {
-		switch (notif) {
-		case(PAUSE):
-		{
-			for (int i = 0;i < players.size();i++) {
-				tent->addPlayer(players[i]);
-				players[i]->leaveHole();
-			}
-			players.clear();
-			this->setStatus(PAUSED);
-		}
-		case(RESUME):
-		{
-			players = tent->getPlayersOnHole(holeNumber);
-			this->setStatus(EventStatus::OPEN);
-		}
-
-		}
-	}
+	void HandleNotification(Notifications notif);
 	/**
  * @brief Destructor
  * */
-	virtual ~GolfHole() {};
+	virtual ~GolfHole();
 
 
 
