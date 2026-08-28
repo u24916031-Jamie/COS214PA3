@@ -36,6 +36,20 @@ public:
 	virtual void HandleNotification(Notifications notif) {
 		// do nothing
 	}
+
+	virtual void open() {
+		status = EventStatus::OPEN;
+	};
+
+	virtual void close() {
+		status = EventStatus::CLOSED;
+
+	};
+
+	virtual void addComponent(EventComponent* component) {};
+
+	virtual void removeComponent(EventComponent* component) {};
 };
+
 
 #endif

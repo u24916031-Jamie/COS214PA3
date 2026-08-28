@@ -76,13 +76,17 @@ public:
 		state.score += score;
 		state.par += currentHole->getPar();
 		state.holesPlayed++;
+		notify();
 	}
 
 	void beginHole(GolfHole* hole) {
 		currentHole = hole;
+		hole->addPlayer(this);
 	}
 	void leaveHole() {
+		currentHole->removePlayer(this);
 		currentHole = nullptr;
+
 	}
 
 };

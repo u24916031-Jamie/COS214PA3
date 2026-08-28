@@ -11,11 +11,10 @@ private:
 	PlayerObserver* playerObserver;
 	std::vector<PlayerState> playerScores;
 public:
-	Scoreboard() = delete;
 	/**
 	 * @brief Constructor for Scoreboard
 	 * */
-	Scoreboard(int capacity) : EventUnit(capacity, Other) {};
+	Scoreboard() : EventUnit(0, Other) {};
 
 	/**
  * @brief Destructor

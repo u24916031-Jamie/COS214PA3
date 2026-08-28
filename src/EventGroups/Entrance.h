@@ -6,7 +6,6 @@
 class Entrance : public EventGroup {
 
 public:
-	Entrance() = delete;
 	/**
 	 * @brief Constructor for Entrance
 	 * */

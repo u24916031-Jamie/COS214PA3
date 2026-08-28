@@ -8,7 +8,6 @@
 class GolfCourse : public EventGroup {
 
 public:
-	GolfCourse() = delete;
 	/**
 	 * @brief Constructor for GolfCourse
 	 * */

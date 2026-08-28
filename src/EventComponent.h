@@ -14,13 +14,12 @@ enum EventStatus {
 class EventComponent {
 protected:
 	EventComponent() {};
-private:
+protected:
 
 	EventStatus status = CLOSED;
 
 
 public:
-	EventComponent() = delete;
 
 	/**
 	 * @brief handles OPEN order

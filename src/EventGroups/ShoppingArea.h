@@ -6,7 +6,6 @@
 class ShoppingArea : public EventGroup {
 
 public:
-	ShoppingArea() = delete;
 	/**
 	 * @brief Constructor for ShoppingArea
 	 * */
