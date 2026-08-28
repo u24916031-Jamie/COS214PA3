@@ -33,6 +33,21 @@ public:
 			}
 		}
 	}
+	std::vector<Player*> getPlayersOnHole(int hole) {
+		std::vector<Player*> retPlayers;
+
+		for (int i = 0;i < players.size();i++) {
+			if (players[i]->getState().holesPlayed == hole) {
+				retPlayers.push_back(players[i]);
+			}
+		}
+		for (auto player : players) {
+			removePlayer(player);
+		}
+
+
+		return retPlayers;
+	}
 };
 
 #endif

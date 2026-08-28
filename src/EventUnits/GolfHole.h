@@ -26,8 +26,11 @@ public:
 		this->par = par;
 	};
 
-	int getPar() {
+	int getPar() const {
 		return par;
+	}
+	int getHoleNumber()const {
+		return holeNumber;
 	}
 
 	void addPlayer(Player* player) {
@@ -53,12 +56,22 @@ public:
 	}
 
 	virtual void HandleNotification(Notifications notif) {
-		if (notif == THUNDER) {
+		switch (notif) {
+		case(PAUSE):
+		{
 			for (int i = 0;i < players.size();i++) {
 				tent->addPlayer(players[i]);
 				players[i]->leaveHole();
 			}
 			players.clear();
+			this->setStatus(PAUSED);
+		}
+		case(RESUME):
+		{
+			players = tent->getPlayersOnHole(holeNumber);
+			this->setStatus(EventStatus::OPEN);
+		}
+
 		}
 	}
 	/**
