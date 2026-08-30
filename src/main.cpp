@@ -32,7 +32,9 @@ int main() {
 	course->addComponent(scoreboard1);
 
 
+	PlayerTent tent(50);
 
+	course->SetPlayerTent(&tent);
 
 
 
