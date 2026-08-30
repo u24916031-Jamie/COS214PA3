@@ -42,7 +42,7 @@ public:
 	std::string printScores() {
 		std::stringstream ss;
 		for (auto score : playerScores) {
-			ss << score.name << " " << score.score << " Through: " << score.holesPlayed << '\n';
+			ss << score.name << ": " << score.score << " Through: " << score.holesPlayed << '\n';
 		}
 		return ss.str();
 	}

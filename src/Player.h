@@ -26,7 +26,18 @@ public:
 	/**
  * @brief Destructor
  * */
-	virtual ~Player() {};
+	virtual ~Player() {
+
+		for (size_t i = 0;i < observerList.size();i++) {
+			if (PlayerObserver* po = dynamic_cast<PlayerObserver*>(observerList[i])) {
+
+				po->deregisterPlayer(this);
+			}
+
+
+		}
+		observerList.clear();
+	};
 
 	void attach(PlayerObserver* observer) {
 		for (size_t i = 0;i < observerList.size();i++) {

@@ -9,16 +9,20 @@ void Player::finishHole(int score) {
 	state.score += score;
 	state.par += currentHole->getPar();
 	state.holesPlayed++;
-	std::cout << "Player " << state.name << " Finished hole: " << state.holesPlayed << '\n';
+	std::cout << "Player " << state.name << " Finished hole " << state.holesPlayed << " with score: " << score << '\n';
 	notify();
 }
 
 void Player::beginHole(GolfHole* hole) {
+	leaveHole();
 	currentHole = hole;
 	hole->addPlayer(this);
 }
 void Player::leaveHole() {
-	currentHole->removePlayer(this);
-	currentHole = nullptr;
+	if (currentHole != nullptr) {
+
+		currentHole->removePlayer(this);
+		currentHole = nullptr;
+	}
 
 }

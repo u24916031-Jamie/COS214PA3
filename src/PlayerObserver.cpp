@@ -32,6 +32,11 @@ PlayerObserver::~PlayerObserver() {
 	for (std::size_t i = 0;i < players.size();i++) {
 		players[i]->detach(this);
 	}
+	for (std::size_t i = 0;i < scoreboards.size();i++) {
+		scoreboards[i]->deregisterPlayerObserver(this);
+	}
+
+
 }
 
 void PlayerObserver::registerPlayer(Player* player) {
@@ -88,7 +93,6 @@ void PlayerObserver::detach(Scoreboard* observer) {
 
 void PlayerObserver::update() {
 	for (int i = 0;i < players.size();i++) {
-		std::cout << "Updating player " << players[i]->getState().name << " score!\n";
 		playerStates[i] = players[i]->getState();
 	}
 	notify();

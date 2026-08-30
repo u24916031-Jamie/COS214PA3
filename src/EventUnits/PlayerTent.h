@@ -13,6 +13,7 @@ public:
 	PlayerTent() = delete;
 	PlayerTent(int capacity) :EventUnit(capacity, Other) {};
 
+	virtual ~PlayerTent() {};
 
 	void addPlayer(Player* player) {
 		for (int i = 0;i < players.size();i++) {

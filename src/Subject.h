@@ -12,13 +12,12 @@ protected:
 public:
 	virtual void notify() {
 		for (std::size_t i = 0;i < observerList.size();i++) {
-			std::cout << "Updating observer: " << i << '\n';
 			observerList[i]->update();
 		}
 	}
 
 
-
+	virtual ~Subject() {};
 
 
 };
