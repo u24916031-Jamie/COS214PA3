@@ -37,6 +37,11 @@ public:
 		return status;
 	}
 
+
+	/**
+* @brief Gets current status
+* @param status new status of component
+*/
 	virtual void setStatus(EventStatus status) {
 		this->status = status;
 	}
@@ -47,8 +52,8 @@ public:
 	virtual int getCapacity()const = 0;
 
 	/**
-	 * @brief Gets current unmber of people in component
-	 * @return int current unmber of people in component
+	 * @brief Gets current number of people in component
+	 * @return int current number of people in component
 	 * */
 	virtual int getSize() const = 0;
 
@@ -68,8 +73,15 @@ public:
 	 * */
 	virtual ~EventComponent() {};
 
-
+	/**
+	 * @brief Handles notifications
+	 * @param notif Notification to be passed down to all children
+	 * */
 	virtual void HandleNotification(Notifications notif) = 0;
+	/**
+ * @brief Sets player tent for all golf holes
+ * @param tent weak tent pointer to be passed to holes
+ * */
 	virtual void SetPlayerTent(PlayerTent* tent) {};
 
 };

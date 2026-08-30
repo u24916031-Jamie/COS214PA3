@@ -7,6 +7,12 @@
 #include "PlayerTent.h"
 
 
+
+/**
+ *
+ * @brief Golf hole that is played by player
+ *
+ */
 class GolfHole : public EventUnit {
 
 private:
@@ -25,24 +31,40 @@ public:
 		this->holeNumber = holeNum;
 		this->par = par;
 	};
-
+	/**
+	 * @brief returns the par for the hole
+	 *@return int par
+	 */
 	int getPar() const {
 		return par;
 	}
+	/**
+ * @brief returns the number of the hole
+ *@return int hole number
+ */
 	int getHoleNumber()const {
 		return holeNumber;
 	}
 
-
+	/**
+ * @brief Sets status of golf hole to OPENED
+ */
 	virtual void open() {
 		status = EventStatus::OPENED;
 	};
 
+	/**
+* @brief Sets status of golf hole to CLOSED
+*/
 	virtual void close() {
 		status = EventStatus::CLOSED;
 
 	};
 
+	/**
+* @brief Adds a player to the hole
+*@param player Weak pointer to player about to play this hole
+*/
 	void addPlayer(Player* player) {
 		for (int i = 0;i < players.size();i++) {
 			if (players[i] == player) {
@@ -51,6 +73,11 @@ public:
 		}
 		players.push_back(player);
 	}
+
+	/**
+* @brief Removes player from hole
+*@param player Weak pointer to player playing this hole
+*/
 	void removePlayer(Player* player) {
 		std::vector<Player*>::iterator it;
 		for (it = players.begin();it != players.end();it++) {
@@ -61,10 +88,17 @@ public:
 			}
 		}
 	}
+	/**
+* @brief Sets the PlayerTent
+*@param player Weak pointer to PlayerTent
+*/
 	void SetPlayerTent(PlayerTent* tent) {
 		this->tent = tent;
 	}
-
+	/**
+* @brief Handles all notifications
+*@param notif Notification
+*/
 	void HandleNotification(Notifications notif);
 	/**
  * @brief Destructor

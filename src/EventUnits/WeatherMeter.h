@@ -10,6 +10,10 @@
 #include "Notifications.h"
 
 
+
+/**
+	* @brief Senses the current state of the weather
+	*/
 class WeatherMeter : public EventUnit, public Subject {
 
 private:
@@ -30,6 +34,10 @@ public:
 	virtual ~WeatherMeter() {};
 
 
+	/**
+		* @brief Attaches WeatherObserver as observer
+		*@param observer Weak pointer to WeatherObserver object
+		*/
 	void attach(WeatherObserver* observer) {
 		for (size_t i = 0;i < observerList.size();i++) {
 			if (observerList[i] == observer) {
@@ -42,6 +50,10 @@ public:
 	}
 
 
+	/**
+		* @brief Detaches WeatherObserver as observer
+		* @param observer Weak pointer to WeatherObserver to be removed as observer
+		*/
 	void detach(WeatherObserver* observer) {
 		for (size_t i = 0;i < observerList.size();i++) {
 			if (observerList[i] == observer) {
@@ -53,7 +65,10 @@ public:
 			}
 		}
 	}
-
+	/**
+		* @brief Sets the current weather
+		* @param weather Weather status
+		*/
 	void setWeather(Notifications weather) {
 		switch (weather) {
 		case (CLEAR):
@@ -68,7 +83,9 @@ public:
 		}
 		notify();
 	}
-
+	/**
+		* @brief Gets the current state of the weather
+		*/
 	Notifications getState() {
 		return weather;
 	}

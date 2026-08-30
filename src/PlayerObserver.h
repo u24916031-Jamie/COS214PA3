@@ -11,6 +11,11 @@ class Player;
 class Scoreboard;
 
 
+/**
+ *
+ * @brief Acts as an observer to Players, and as Subject to Scoreboards
+ *
+ */
 class PlayerObserver : public Observer, public Subject {
 protected:
 	std::vector<PlayerState> playerStates;

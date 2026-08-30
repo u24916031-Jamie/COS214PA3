@@ -8,6 +8,10 @@
 #include <string>
 #include <sstream>
 class PlayerObserver;
+
+/**
+* @brief Scoreboard class which displays the current tournament standings
+*/
 class Scoreboard : public EventUnit, public Observer {
 private:
 	PlayerObserver* playerObserver;
@@ -26,19 +30,31 @@ public:
 
 	};
 
-
+	/**
+	* @brief Registers PlayerObserver as subject
+	*@param playerObserver Weak pointer to PlayerObserver which acts as subject
+	*/
 	void registerPlayerObserver(PlayerObserver* playerObserver) {
 		this->playerObserver = playerObserver;
 	}
+
+	/**
+	* @brief Deregisters PlayerObserver as subject
+	*@param playerObserver Weak pointer to PlayerObserver to be removed as subject
+	*/
 	void deregisterPlayerObserver(PlayerObserver* playerObserver) {
 		this->playerObserver = nullptr;
 	}
-
+	/**
+		* @brief Updates player scores
+		*/
 	void update() {
 		playerScores = playerObserver->getState();
 	}
 
-
+	/**
+		* @brief Prints out current tournament standings
+		*/
 	std::string printScores() {
 		std::stringstream ss;
 		for (auto score : playerScores) {

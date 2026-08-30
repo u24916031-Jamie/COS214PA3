@@ -7,7 +7,11 @@ enum EventUnitType {
 	GolfHoleUnit, Other
 };
 
-
+/**
+ *
+ * @brief Leaf class of Composite Design pattern
+ *
+ */
 class EventUnit : public EventComponent {
 private:
 	EventUnitType type;
@@ -29,25 +33,44 @@ public:
 	}
 
 
+	/**
+	 * @brief Gets current number of people in component
+	 * @return int current number of people in component
+	 * */
 	virtual int getSize() const {
 		return size;
 	}
-
+	/**
+		 * @brief Handles notifications
+		 * @param notif Notification to be passed down to all children
+		 * */
 	virtual void HandleNotification(Notifications notif) {
 		// do nothing
 	}
 
+	/**
+ * @brief handles OPEN order
+ */
 	virtual void open() {
 		status = EventStatus::OPENED;
 	};
 
+	/**
+ * @brief handles CLOSE order
+ */
 	virtual void close() {
 		status = EventStatus::CLOSED;
 
 	};
-
+	/**
+			 * @brief Adds a component as a child. Does nothing as EventUnit
+			 * @param component pointer to new EventComponent
+			 * */
 	virtual void addComponent(EventComponent* component) {};
-
+	/**
+			 * @brief Removes a component as a child. Does nothing as EventUnit
+			 * @param component pointer to EventComponent
+			 * */
 	virtual void removeComponent(EventComponent* component) {};
 };
 

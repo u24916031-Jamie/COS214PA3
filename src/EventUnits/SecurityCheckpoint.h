@@ -3,6 +3,10 @@
 
 #include "EventUnit.h"
 
+
+/**
+	* @brief Security Checkpoint where spectators are cleared for entry
+	*/
 class SecurityCheckpoint : public EventUnit {
 
 public:

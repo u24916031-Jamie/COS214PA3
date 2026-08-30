@@ -3,6 +3,10 @@
 
 #include "EventUnit.h"
 
+
+/**
+* @brief Medical Stand for medical emergencies
+*/
 class MedicalStand : public EventUnit {
 
 public:

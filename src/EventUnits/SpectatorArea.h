@@ -3,6 +3,11 @@
 
 #include "EventUnit.h"
 
+
+
+/**
+	* @brief Stands/viewing area for spectators to view holes from
+	*/
 class SpectatorArea : public EventUnit {
 
 public:

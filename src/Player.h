@@ -9,6 +9,13 @@
 
 class GolfHole;
 
+
+
+/**
+ *
+ * @brief Player class that plays golf holes
+ *
+ */
 class Player :public Subject {
 private:
 	PlayerState state;

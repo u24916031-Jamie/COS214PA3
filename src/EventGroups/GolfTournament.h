@@ -3,7 +3,11 @@
 
 #include "EventGroup.h"
 
-
+/**
+ *
+ * @brief Golf Tournament
+ *
+ */
 class GolfTournament : public EventGroup {
 
 public:
