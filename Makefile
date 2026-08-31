@@ -3,7 +3,7 @@ CXX      := g++
 SUBDIRS  := EventGroups EventUnits
 INC_FLAGS := $(addprefix -Isrc/, $(SUBDIRS))
 CXXFLAGS  := -Wall -Wextra -std=c++11 -I. -Isrc $(INC_FLAGS)
-TARGET   := eventFlow
+TARGET   := bin/eventFlow
 
 
 SRCS := $(wildcard src/**/*.cpp) $(wildcard src/*.cpp)
