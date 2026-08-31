@@ -51,10 +51,7 @@ void PlayerObserver::registerPlayer(Player* player) {
 void PlayerObserver::deregisterPlayer(Player* player) {
 	for (std::size_t i = 0;i < players.size();i++) {
 		if (players[i] == player) {
-			// std::vector<Player*>::iterator playerIt;
-			// std::vector<PlayerState>::iterator statesIt;
-			// playerIt += i;
-			// statesIt += i;
+			
 			players.erase(players.begin()+i);
 			playerStates.erase(playerStates.begin()+i);
 			return;
