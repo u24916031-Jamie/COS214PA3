@@ -4,7 +4,9 @@
 #include "Observer.h"
 #include "Subject.h"
 #include <vector>
-#include "WeatherMeter.h"
+#include "EventComponent.h"
+
+class WeatherMeter;
 
 
 /**
@@ -17,6 +19,8 @@ protected:
 	Notifications weather;
 
 	WeatherMeter* subject;
+
+	EventComponent* root = nullptr;
 
 
 public:
@@ -35,10 +39,12 @@ public:
 
 
 
-
-	void update() {
-		weather = subject->getState();
+	void setRoot(EventComponent* root)
+	{
+		this->root = root;
 	}
+
+	void update();
 
 
 

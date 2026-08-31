@@ -31,6 +31,7 @@ public:
 		for (auto child : children) {
 			capacity += child->getCapacity();
 		}
+		return capacity;
 	}
 
 	/**
@@ -42,6 +43,7 @@ public:
 		for (auto child : children) {
 			size += child->getSize();
 		}
+		return size;
 	}
 
 	/**
