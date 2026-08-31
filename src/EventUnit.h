@@ -10,19 +10,19 @@ enum EventUnitType {
 
 class EventUnit : public EventComponent {
 private:
+	int capacity = 0;	
 	EventUnitType type;
-	int capacity = 0;
-	int size = 0;
+	int size=0;
 public:
 	EventUnit() = delete;
 	/**
-	 * @brief Constructor for EventUnit
-	 * */
+	* @brief Constructor for EventUnit
+	**/
 	EventUnit(int capacity, EventUnitType type) : EventComponent(), capacity(capacity), type(type) {};
 
 	/**
- * @brief Destructor
- * */
+	* @brief Destructor
+	**/
 	virtual ~EventUnit() {};
 	virtual int getCapacity()const {
 		return capacity;
@@ -32,23 +32,32 @@ public:
 	virtual int getSize() const {
 		return size;
 	}
-
-	virtual void HandleNotification(Notifications notif) {
-		// do nothing
-	}
-
+	/**
+	 * @brief Does nothing
+	 */
+	virtual void HandleNotification(Notifications) {}
+	/**
+	 * @brief Sets status to opened
+	 */
 	virtual void open() {
 		status = EventStatus::OPENED;
 	};
 
+	/**
+	 * @brief Sets status to closed
+	 */
 	virtual void close() {
 		status = EventStatus::CLOSED;
 
 	};
-
-	virtual void addComponent(EventComponent* component) {};
-
-	virtual void removeComponent(EventComponent* component) {};
+	/**
+	 * @brief Adds the component if possible
+	 */
+	virtual void addComponent(EventComponent*) {};
+	/**
+	 * @brief Removes component if possible
+	 */
+	virtual void removeComponent(EventComponent*) {};
 };
 
 

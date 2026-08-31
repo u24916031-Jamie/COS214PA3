@@ -18,7 +18,7 @@ void PlayerObserver::sort() {
 	// 3. Reorder the original arrays using the sorted indices
 	std::vector<PlayerState> sortedplayerStates;
 	std::vector < Player*> sortedplayers;
-	for (std::size_t i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i) {
 		sortedplayerStates[i] = playerStates[indices[i]];
 		sortedplayers[i] = players[indices[i]];
 	}
@@ -92,7 +92,7 @@ void PlayerObserver::detach(Scoreboard* observer) {
 
 
 void PlayerObserver::update() {
-	for (int i = 0;i < players.size();i++) {
+	for (int i = 0;i <(int) players.size();i++) {
 		playerStates[i] = players[i]->getState();
 	}
 	notify();

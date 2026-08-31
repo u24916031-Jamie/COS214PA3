@@ -30,7 +30,7 @@ public:
 	void registerPlayerObserver(PlayerObserver* playerObserver) {
 		this->playerObserver = playerObserver;
 	}
-	void deregisterPlayerObserver(PlayerObserver* playerObserver) {
+	void deregisterPlayerObserver(PlayerObserver*) {
 		this->playerObserver = nullptr;
 	}
 

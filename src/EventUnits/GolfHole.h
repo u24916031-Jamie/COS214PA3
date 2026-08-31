@@ -44,7 +44,7 @@ public:
 	};
 
 	void addPlayer(Player* player) {
-		for (int i = 0;i < players.size();i++) {
+		for (int i = 0;i <(int) players.size();i++) {
 			if (players[i] == player) {
 				return;
 			}

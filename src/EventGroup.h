@@ -22,6 +22,7 @@ public:
 		for (auto child : children) {
 			capacity += child->getCapacity();
 		}
+		return capacity;
 	}
 
 	virtual int getSize() const {
@@ -29,6 +30,7 @@ public:
 		for (auto child : children) {
 			size += child->getSize();
 		}
+		return size;
 	}
 
 	/**
