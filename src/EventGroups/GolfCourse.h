@@ -5,6 +5,11 @@
 #include "PlayerTent.h"
 
 
+/**
+ *
+ * @brief Golf Course
+ *
+ */
 class GolfCourse : public EventGroup {
 
 public:

@@ -1,0 +1,141 @@
+\doxysection{Weather\+Meter Class Reference}
+\hypertarget{classWeatherMeter}{}\label{classWeatherMeter}\index{WeatherMeter@{WeatherMeter}}
+
+
+Senses the current state of the weather.  
+
+
+
+
+{\ttfamily \#include $<$Weather\+Meter.\+h$>$}
+
+
+
+Inheritance diagram for Weather\+Meter\+:
+% FIG 0
+
+
+Collaboration diagram for Weather\+Meter\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classWeatherMeter_a90515a06196997a4ee94d54b947f58d2}\label{classWeatherMeter_a90515a06196997a4ee94d54b947f58d2} 
+{\bfseries Weather\+Meter} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classWeatherMeter}{Weather\+Meter}. \end{DoxyCompactList}\item 
+\Hypertarget{classWeatherMeter_a810d01f00aea3457207cf6d9ea37d018}\label{classWeatherMeter_a810d01f00aea3457207cf6d9ea37d018} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Weather\+Meter} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherMeter_aae7e11643abb44cd2c4e2f37c68e8f3a}{attach}} (\mbox{\hyperlink{classWeatherObserver}{Weather\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Attaches \doxylink{classWeatherObserver}{Weather\+Observer} as observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherMeter_adf1879ec9d8821d2ebecb1e21d6e6f5e}{detach}} (\mbox{\hyperlink{classWeatherObserver}{Weather\+Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Detaches \doxylink{classWeatherObserver}{Weather\+Observer} as observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherMeter_ae06b1af392a3ac3608472a11b59f8747}{set\+Weather}} (Notifications weather)
+\begin{DoxyCompactList}\small\item\em Sets the current weather. \end{DoxyCompactList}\item 
+\Hypertarget{classWeatherMeter_a7a377ff7be7cbd474ce3559f4356b64b}\label{classWeatherMeter_a7a377ff7be7cbd474ce3559f4356b64b} 
+Notifications {\bfseries get\+State} ()
+\begin{DoxyCompactList}\small\item\em Gets the current state of the weather. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Event\+Unit} (int capacity, Event\+Unit\+Type type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventUnit_a3ab6906a17a0c102e4669e72148272b5}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets current capacity. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventUnit_a5b6fc70bb0054dcae9274ae562f203fd}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets current number of people in component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_aaff6bd2da88f87864915ee32b50e5cc0}{Handle\+Notification}} (Notifications notif)
+\begin{DoxyCompactList}\small\item\em Handles notifications. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_ab8de607729f9657fc4a93fe3a7f4b81b}{open}} ()
+\begin{DoxyCompactList}\small\item\em handles OPEN order \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_a7680e50ac5ca9bcf04a60dc21d68cefa}{close}} ()
+\begin{DoxyCompactList}\small\item\em handles CLOSE order \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_aeffc40832dcdb5c25a58d6f5b0376ce8}{add\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Adds a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_a5a45a590a0c628fe0abbe5b0d48d646b}{remove\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Removes a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Event\+Status \mbox{\hyperlink{classEventComponent_a3319a53698841f5a6cc8aa2ae754049a}{report\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a603768917eea3e68931d93e7f1389b80}{set\+Status}} (Event\+Status status)
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a0160b60b6a7d4dedb6f8829a43df97f0}{Set\+Player\+Tent}} (\mbox{\hyperlink{classPlayerTent}{Player\+Tent}} \texorpdfstring{$\ast$}{*}tent)
+\begin{DoxyCompactList}\small\item\em Sets player tent for all golf holes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries notify} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Status {\bfseries status} = CLOSED
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries observer\+List}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Senses the current state of the weather. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWeatherMeter_aae7e11643abb44cd2c4e2f37c68e8f3a}\label{classWeatherMeter_aae7e11643abb44cd2c4e2f37c68e8f3a} 
+\index{WeatherMeter@{WeatherMeter}!attach@{attach}}
+\index{attach@{attach}!WeatherMeter@{WeatherMeter}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Weather\+Meter\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWeatherObserver}{Weather\+Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attaches \doxylink{classWeatherObserver}{Weather\+Observer} as observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Weak pointer to \doxylink{classWeatherObserver}{Weather\+Observer} object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWeatherMeter_adf1879ec9d8821d2ebecb1e21d6e6f5e}\label{classWeatherMeter_adf1879ec9d8821d2ebecb1e21d6e6f5e} 
+\index{WeatherMeter@{WeatherMeter}!detach@{detach}}
+\index{detach@{detach}!WeatherMeter@{WeatherMeter}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Weather\+Meter\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWeatherObserver}{Weather\+Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Detaches \doxylink{classWeatherObserver}{Weather\+Observer} as observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Weak pointer to \doxylink{classWeatherObserver}{Weather\+Observer} to be removed as observer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWeatherMeter_ae06b1af392a3ac3608472a11b59f8747}\label{classWeatherMeter_ae06b1af392a3ac3608472a11b59f8747} 
+\index{WeatherMeter@{WeatherMeter}!setWeather@{setWeather}}
+\index{setWeather@{setWeather}!WeatherMeter@{WeatherMeter}}
+\doxysubsubsection{\texorpdfstring{setWeather()}{setWeather()}}
+{\footnotesize\ttfamily void Weather\+Meter\+::set\+Weather (\begin{DoxyParamCaption}\item[{Notifications}]{weather }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the current weather. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weather} & Weather status \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Event\+Units/Weather\+Meter.\+h\end{DoxyCompactItemize}

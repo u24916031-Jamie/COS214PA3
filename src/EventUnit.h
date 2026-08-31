@@ -7,57 +7,71 @@ enum EventUnitType {
 	GolfHoleUnit, Other
 };
 
-
+/**
+ *
+ * @brief Leaf class of Composite Design pattern
+ *
+ */
 class EventUnit : public EventComponent {
 private:
-	int capacity = 0;	
 	EventUnitType type;
-	int size=0;
+	int capacity = 0;
+	int size = 0;
 public:
 	EventUnit() = delete;
 	/**
-	* @brief Constructor for EventUnit
-	**/
+	 * @brief Constructor for EventUnit
+	 * */
 	EventUnit(int capacity, EventUnitType type) : EventComponent(), capacity(capacity), type(type) {};
 
 	/**
-	* @brief Destructor
-	**/
+ * @brief Destructor
+ * */
 	virtual ~EventUnit() {};
 	virtual int getCapacity()const {
 		return capacity;
 	}
 
 
+	/**
+	 * @brief Gets current number of people in component
+	 * @return int current number of people in component
+	 * */
 	virtual int getSize() const {
 		return size;
 	}
 	/**
-	 * @brief Does nothing
-	 */
-	virtual void HandleNotification(Notifications) {}
+		 * @brief Handles notifications
+		 * @param notif Notification to be passed down to all children
+		 * */
+	virtual void HandleNotification(Notifications notif) {
+		// do nothing
+	}
+
 	/**
-	 * @brief Sets status to opened
-	 */
+ * @brief handles OPEN order
+ */
 	virtual void open() {
 		status = EventStatus::OPENED;
 	};
 
 	/**
-	 * @brief Sets status to closed
-	 */
+ * @brief handles CLOSE order
+ */
 	virtual void close() {
 		status = EventStatus::CLOSED;
 
 	};
 	/**
-	 * @brief Adds the component if possible
-	 */
-	virtual void addComponent(EventComponent*) {};
+			 * @brief Adds a component as a child. Does nothing as EventUnit
+			 * @param component pointer to new EventComponent
+			 * */
+	virtual void addComponent(EventComponent* component) {};
 	/**
-	 * @brief Removes component if possible
-	 */
-	virtual void removeComponent(EventComponent*) {};
+			 * @brief Removes a component as a child. Does nothing as EventUnit
+			 * @param component pointer to EventComponent
+			 * */
+	virtual void removeComponent(EventComponent* component) {};
 };
 
 

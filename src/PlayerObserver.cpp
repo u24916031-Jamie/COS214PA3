@@ -18,7 +18,7 @@ void PlayerObserver::sort() {
 	// 3. Reorder the original arrays using the sorted indices
 	std::vector<PlayerState> sortedplayerStates;
 	std::vector < Player*> sortedplayers;
-	for (int i = 0; i < n; ++i) {
+	for (std::size_t i = 0; i < n; ++i) {
 		sortedplayerStates[i] = playerStates[indices[i]];
 		sortedplayers[i] = players[indices[i]];
 	}
@@ -51,9 +51,12 @@ void PlayerObserver::registerPlayer(Player* player) {
 void PlayerObserver::deregisterPlayer(Player* player) {
 	for (std::size_t i = 0;i < players.size();i++) {
 		if (players[i] == player) {
-			
-			players.erase(players.begin()+i);
-			playerStates.erase(playerStates.begin()+i);
+			std::vector<Player*>::iterator playerIt;
+			std::vector<PlayerState>::iterator statesIt;
+			playerIt += i;
+			statesIt += i;
+			players.erase(playerIt);
+			playerStates.erase(statesIt);
 			return;
 		}
 	}
@@ -76,20 +79,12 @@ void PlayerObserver::attach(Scoreboard* observer) {
 
 
 void PlayerObserver::detach(Scoreboard* observer) {
-	if(observer==nullptr)
-	{
-		return;
-	}
-	if(observerList.empty())
-	{
-		return;
-	}
 	for (size_t i = 0;i < observerList.size();i++) {
-		if (observerList.at(i) == observer) {
-			//std::vector<Observer*>::iterator it;
-			//it += i;
-			//observer->deregisterPlayerObserver(this);
-			observerList.erase(observerList.begin()+i);
+		if (observerList[i] == observer) {
+			std::vector<Observer*>::iterator it;
+			it += i;
+			observer->deregisterPlayerObserver(this);
+			observerList.erase(it);
 			return;
 		}
 	}
@@ -97,8 +92,12 @@ void PlayerObserver::detach(Scoreboard* observer) {
 
 
 void PlayerObserver::update() {
-	for (int i = 0;i <(int) players.size();i++) {
+	for (int i = 0;i < players.size();i++) {
 		playerStates[i] = players[i]->getState();
+	}
+	if (players.size() > 1){
+
+		sort();
 	}
 	notify();
 }

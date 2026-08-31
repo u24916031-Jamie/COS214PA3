@@ -1,0 +1,60 @@
+\doxysection{Weather\+Observer Class Reference}
+\hypertarget{classWeatherObserver}{}\label{classWeatherObserver}\index{WeatherObserver@{WeatherObserver}}
+
+
+Acts as observer to \doxylink{classWeatherMeter}{Weather\+Meter}.  
+
+
+
+
+{\ttfamily \#include $<$Weather\+Observer.\+h$>$}
+
+
+
+Inheritance diagram for Weather\+Observer\+:
+% FIG 0
+
+
+Collaboration diagram for Weather\+Observer\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classWeatherObserver_a4c430e5cb4ade2d8df268a44b00828cc}\label{classWeatherObserver_a4c430e5cb4ade2d8df268a44b00828cc} 
+void {\bfseries register\+Weather\+Meter} (\mbox{\hyperlink{classWeatherMeter}{Weather\+Meter}} \texorpdfstring{$\ast$}{*}weather\+Meter)
+\item 
+\Hypertarget{classWeatherObserver_a9fc362c8db3738667d16a4a5c31b3704}\label{classWeatherObserver_a9fc362c8db3738667d16a4a5c31b3704} 
+void {\bfseries deregister\+Weather\+Meter} ()
+\item 
+void \mbox{\hyperlink{classWeatherObserver_aae22fe846178d9cbb114ae25c49f50f7}{update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classWeatherObserver_ac397d36b5fcb3d9fb1d29bb1873157ce}\label{classWeatherObserver_ac397d36b5fcb3d9fb1d29bb1873157ce} 
+Notifications {\bfseries weather}
+\item 
+\Hypertarget{classWeatherObserver_ae03e41825600fea285b16b0a6e2899d5}\label{classWeatherObserver_ae03e41825600fea285b16b0a6e2899d5} 
+\mbox{\hyperlink{classWeatherMeter}{Weather\+Meter}} \texorpdfstring{$\ast$}{*} {\bfseries subject}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Acts as observer to \doxylink{classWeatherMeter}{Weather\+Meter}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWeatherObserver_aae22fe846178d9cbb114ae25c49f50f7}\label{classWeatherObserver_aae22fe846178d9cbb114ae25c49f50f7} 
+\index{WeatherObserver@{WeatherObserver}!update@{update}}
+\index{update@{update}!WeatherObserver@{WeatherObserver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Weather\+Observer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classObserver}{Observer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Weather\+Observer.\+h\end{DoxyCompactItemize}

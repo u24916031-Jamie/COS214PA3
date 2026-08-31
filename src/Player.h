@@ -9,10 +9,17 @@
 
 class GolfHole;
 
+
+
+/**
+ *
+ * @brief Player class that plays golf holes
+ *
+ */
 class Player :public Subject {
 private:
-	PlayerState state;
-	GolfHole* currentHole;
+	PlayerState state = {};
+	GolfHole* currentHole = nullptr;
 
 public:
 	Player() = delete;
@@ -21,7 +28,6 @@ public:
 	 * */
 	Player(std::string name) : Subject() {
 		state.name = name;
-		currentHole=nullptr;
 	};
 
 	/**
@@ -53,16 +59,12 @@ public:
 
 
 	void detach(PlayerObserver* observer) {
-		if(observer==nullptr)
-		{
-			return;
-		}
 		for (size_t i = 0;i < observerList.size();i++) {
 			if (observerList[i] == observer) {
-				// std::vector<Observer*>::iterator it;
-				// it += i;
+				std::vector<Observer*>::iterator it;
+				it += i;
 				observer->deregisterPlayer(this);
-				observerList.erase(observerList.begin()+i);
+				observerList.erase(it);
 				return;
 			}
 		}

@@ -2,7 +2,11 @@
 #define OBSERVER_H
 
 
-
+/**
+ *
+ * @brief Base Observer of Observer Design pattern
+ *
+ */
 class Observer {
 
 public:

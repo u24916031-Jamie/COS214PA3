@@ -6,6 +6,12 @@
 #include <vector>
 #include "WeatherMeter.h"
 
+
+/**
+ *
+ * @brief Acts as observer to WeatherMeter
+ *
+ */
 class WeatherObserver : public Observer {
 protected:
 	Notifications weather;

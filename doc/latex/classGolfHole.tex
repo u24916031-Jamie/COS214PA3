@@ -1,0 +1,208 @@
+\doxysection{Golf\+Hole Class Reference}
+\hypertarget{classGolfHole}{}\label{classGolfHole}\index{GolfHole@{GolfHole}}
+
+
+Golf hole that is played by player.  
+
+
+
+
+{\ttfamily \#include $<$Golf\+Hole.\+h$>$}
+
+
+
+Inheritance diagram for Golf\+Hole\+:
+% FIG 0
+
+
+Collaboration diagram for Golf\+Hole\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGolfHole_a898d5a881200ffd224abf52ca1a97ca6}\label{classGolfHole_a898d5a881200ffd224abf52ca1a97ca6} 
+{\bfseries Golf\+Hole} (int hole\+Num, int par, int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classGolfHole}{Golf\+Hole}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGolfHole_ae80c85f07aa19297077ae6f7902ee1dc}{get\+Par}} () const
+\begin{DoxyCompactList}\small\item\em returns the par for the hole \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGolfHole_abb3ae5a2df87b02818efc3262f05049c}{get\+Hole\+Number}} () const
+\begin{DoxyCompactList}\small\item\em returns the number of the hole \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGolfHole_a940c72a442ad0929986d6366bd57b38f}{open}} ()
+\begin{DoxyCompactList}\small\item\em Sets status of golf hole to OPENED. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGolfHole_ab51b5c0d1c115798c1e9d4a8e1d5cbdd}{close}} ()
+\begin{DoxyCompactList}\small\item\em Sets status of golf hole to CLOSED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGolfHole_a25f489426d51c78020fe3798c2f84eee}{add\+Player}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Adds a player to the hole. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGolfHole_a2fabdd80bedc472dafae4a9b2dfe7416}{remove\+Player}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Removes player from hole. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGolfHole_ac1ff0b38f536f30dd4aec49c3726b62b}{Set\+Player\+Tent}} (\mbox{\hyperlink{classPlayerTent}{Player\+Tent}} \texorpdfstring{$\ast$}{*}tent)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{classPlayerTent}{Player\+Tent}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGolfHole_a9e425cd8f634f2c8e50da5c71fa7f610}{Handle\+Notification}} (Notifications notif)
+\begin{DoxyCompactList}\small\item\em Handles all notifications. \end{DoxyCompactList}\item 
+\Hypertarget{classGolfHole_a9577a5925c80d6e4eef2f8ac6443cb73}\label{classGolfHole_a9577a5925c80d6e4eef2f8ac6443cb73} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Golf\+Hole} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Event\+Unit} (int capacity, Event\+Unit\+Type type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventUnit_a3ab6906a17a0c102e4669e72148272b5}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets current capacity. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventUnit_a5b6fc70bb0054dcae9274ae562f203fd}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets current number of people in component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_aeffc40832dcdb5c25a58d6f5b0376ce8}{add\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Adds a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_a5a45a590a0c628fe0abbe5b0d48d646b}{remove\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Removes a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Event\+Status \mbox{\hyperlink{classEventComponent_a3319a53698841f5a6cc8aa2ae754049a}{report\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a603768917eea3e68931d93e7f1389b80}{set\+Status}} (Event\+Status status)
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Status {\bfseries status} = CLOSED
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Golf hole that is played by player. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGolfHole_a25f489426d51c78020fe3798c2f84eee}\label{classGolfHole_a25f489426d51c78020fe3798c2f84eee} 
+\index{GolfHole@{GolfHole}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily void Golf\+Hole\+::add\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a player to the hole. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Weak pointer to player about to play this hole \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGolfHole_ab51b5c0d1c115798c1e9d4a8e1d5cbdd}\label{classGolfHole_ab51b5c0d1c115798c1e9d4a8e1d5cbdd} 
+\index{GolfHole@{GolfHole}!close@{close}}
+\index{close@{close}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void Golf\+Hole\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets status of golf hole to CLOSED. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classEventUnit_a7680e50ac5ca9bcf04a60dc21d68cefa}{Event\+Unit}}.
+
+\Hypertarget{classGolfHole_abb3ae5a2df87b02818efc3262f05049c}\label{classGolfHole_abb3ae5a2df87b02818efc3262f05049c} 
+\index{GolfHole@{GolfHole}!getHoleNumber@{getHoleNumber}}
+\index{getHoleNumber@{getHoleNumber}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{getHoleNumber()}{getHoleNumber()}}
+{\footnotesize\ttfamily int Golf\+Hole\+::get\+Hole\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the number of the hole 
+
+\begin{DoxyReturn}{Returns}
+int hole number 
+\end{DoxyReturn}
+\Hypertarget{classGolfHole_ae80c85f07aa19297077ae6f7902ee1dc}\label{classGolfHole_ae80c85f07aa19297077ae6f7902ee1dc} 
+\index{GolfHole@{GolfHole}!getPar@{getPar}}
+\index{getPar@{getPar}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{getPar()}{getPar()}}
+{\footnotesize\ttfamily int Golf\+Hole\+::get\+Par (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the par for the hole 
+
+\begin{DoxyReturn}{Returns}
+int par 
+\end{DoxyReturn}
+\Hypertarget{classGolfHole_a9e425cd8f634f2c8e50da5c71fa7f610}\label{classGolfHole_a9e425cd8f634f2c8e50da5c71fa7f610} 
+\index{GolfHole@{GolfHole}!HandleNotification@{HandleNotification}}
+\index{HandleNotification@{HandleNotification}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{HandleNotification()}{HandleNotification()}}
+{\footnotesize\ttfamily void Golf\+Hole\+::\+Handle\+Notification (\begin{DoxyParamCaption}\item[{Notifications}]{notif }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles all notifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notif} & Notification \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventUnit_aaff6bd2da88f87864915ee32b50e5cc0}{Event\+Unit}}.
+
+\Hypertarget{classGolfHole_a940c72a442ad0929986d6366bd57b38f}\label{classGolfHole_a940c72a442ad0929986d6366bd57b38f} 
+\index{GolfHole@{GolfHole}!open@{open}}
+\index{open@{open}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual void Golf\+Hole\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets status of golf hole to OPENED. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classEventUnit_ab8de607729f9657fc4a93fe3a7f4b81b}{Event\+Unit}}.
+
+\Hypertarget{classGolfHole_a2fabdd80bedc472dafae4a9b2dfe7416}\label{classGolfHole_a2fabdd80bedc472dafae4a9b2dfe7416} 
+\index{GolfHole@{GolfHole}!removePlayer@{removePlayer}}
+\index{removePlayer@{removePlayer}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{removePlayer()}{removePlayer()}}
+{\footnotesize\ttfamily void Golf\+Hole\+::remove\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes player from hole. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Weak pointer to player playing this hole \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGolfHole_ac1ff0b38f536f30dd4aec49c3726b62b}\label{classGolfHole_ac1ff0b38f536f30dd4aec49c3726b62b} 
+\index{GolfHole@{GolfHole}!SetPlayerTent@{SetPlayerTent}}
+\index{SetPlayerTent@{SetPlayerTent}!GolfHole@{GolfHole}}
+\doxysubsubsection{\texorpdfstring{SetPlayerTent()}{SetPlayerTent()}}
+{\footnotesize\ttfamily void Golf\+Hole\+::\+Set\+Player\+Tent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerTent}{Player\+Tent}} \texorpdfstring{$\ast$}{*}}]{tent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the \doxylink{classPlayerTent}{Player\+Tent}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Weak pointer to \doxylink{classPlayerTent}{Player\+Tent} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_a0160b60b6a7d4dedb6f8829a43df97f0}{Event\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Event\+Units/Golf\+Hole.\+h\item 
+src/\+Event\+Units/Golf\+Hole.\+cpp\end{DoxyCompactItemize}

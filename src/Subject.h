@@ -5,6 +5,12 @@
 #include "Observer.h"
 #include <iostream>
 
+
+/**
+ *
+ * @brief Base Subject of Observer Design pattern
+ *
+ */
 class Subject {
 protected:
 	std::vector<Observer*> observerList;

@@ -3,6 +3,13 @@
 
 #include "EventGroup.h"
 
+
+
+/**
+ *
+ * @brief Shopping Area with Commercial Units
+ *
+ */
 class ShoppingArea : public EventGroup {
 
 public:

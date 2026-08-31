@@ -3,6 +3,11 @@
 
 #include "EventUnit.h"
 
+
+
+/**
+* @brief Merch Shop to buy event merchandise
+*/
 class MerchShop : public EventUnit {
 
 public:
