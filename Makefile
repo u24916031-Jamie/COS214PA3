@@ -26,7 +26,7 @@ $(TARGETTEST):
 	$(CXX) $(CXXFLAGSTEST) $(SRCS) -o $@
 
 zip:
-	zip $(ZIP_NAME) $(SRCS) $(HEADERS) $(PDFS) Makefile 
+	zip -j $(ZIP_NAME) $(SRCS) $(HEADERS) $(PDFS) Makefile 
 
 
 run: $(TARGET)
