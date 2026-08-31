@@ -18,8 +18,8 @@ class GolfHole;
  */
 class Player :public Subject {
 private:
-	PlayerState state;
-	GolfHole* currentHole;
+	PlayerState state = {};
+	GolfHole* currentHole = nullptr;
 
 public:
 	Player() = delete;

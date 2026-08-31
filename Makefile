@@ -31,6 +31,8 @@ zip:
 run: $(TARGET)
 	./$(TARGET)
 
+val:
+	valgrind --leak-check=full $(TARGET)
 
 clean:
 	rm -f $(TARGET) $(ZIP_NAME)

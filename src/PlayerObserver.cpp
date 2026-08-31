@@ -95,7 +95,10 @@ void PlayerObserver::update() {
 	for (int i = 0;i < players.size();i++) {
 		playerStates[i] = players[i]->getState();
 	}
-	sort();
+	if (players.size() > 1){
+
+		sort();
+	}
 	notify();
 }
 

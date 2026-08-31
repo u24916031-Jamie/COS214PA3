@@ -34,7 +34,7 @@ int main() {
 
 	PlayerTent tent(50);
 
-	course->SetPlayerTent(&tent);
+	tournament->SetPlayerTent(&tent);
 
 
 
@@ -51,8 +51,7 @@ int main() {
 
 	std::cout << scoreboard1->printScores() << std::endl;
 
-
-	delete course;
+	delete tournament
 
 	return 0;
 }
