@@ -18,7 +18,6 @@ class WeatherMeter : public EventUnit, public Subject {
 
 private:
 	Notifications weather = CLEAR;
-	std::vector<Observer*> observerList;
 
 
 public:
