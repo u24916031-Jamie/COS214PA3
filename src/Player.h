@@ -21,6 +21,7 @@ public:
 	 * */
 	Player(std::string name) : Subject() {
 		state.name = name;
+		currentHole=nullptr;
 	};
 
 	/**
@@ -52,12 +53,16 @@ public:
 
 
 	void detach(PlayerObserver* observer) {
+		if(observer==nullptr)
+		{
+			return;
+		}
 		for (size_t i = 0;i < observerList.size();i++) {
 			if (observerList[i] == observer) {
-				std::vector<Observer*>::iterator it;
-				it += i;
+				// std::vector<Observer*>::iterator it;
+				// it += i;
 				observer->deregisterPlayer(this);
-				observerList.erase(it);
+				observerList.erase(observerList.begin()+i);
 				return;
 			}
 		}

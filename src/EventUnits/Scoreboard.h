@@ -23,6 +23,7 @@ public:
  * */
 	virtual ~Scoreboard() {
 		playerObserver->detach(this);
+		deregisterPlayerObserver(playerObserver);
 
 	};
 
