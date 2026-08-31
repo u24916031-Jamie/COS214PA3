@@ -6,9 +6,11 @@ void GolfHole::HandleNotification(Notifications notif) {
 	switch (notif) {
 	case(PAUSE):
 	{
-		for (std::size_t i = 0;i < players.size();i++) {
-			tent->addPlayer(players[i]);
-			players[i]->leaveHole();
+		std::vector<Player*> onHole = players;
+		for (std::size_t i = 0;i < onHole.size();i++)
+		{
+			tent->addPlayer(onHole[i]);
+			onHole[i]->leaveHole();
 		}
 		players.clear();
 		this->setStatus(PAUSED);
@@ -16,7 +18,11 @@ void GolfHole::HandleNotification(Notifications notif) {
 	}
 	case(RESUME):
 	{
-		players = tent->getPlayersOnHole(holeNumber);
+		std::vector<Player*> returning = tent->getPlayersOnHole(holeNumber);
+		for (std::size_t i = 0;i < returning.size();i++)
+		{
+			returning[i]->beginHole(this);
+		}
 		this->setStatus(EventStatus::OPENED);
 		break;
 	}
