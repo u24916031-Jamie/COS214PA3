@@ -51,7 +51,7 @@ int main() {
 
 	std::cout << scoreboard1->printScores() << std::endl;
 
-	delete tournament
+	delete tournament;
 
 	return 0;
 }

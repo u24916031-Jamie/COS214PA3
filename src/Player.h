@@ -61,7 +61,7 @@ public:
 	void detach(PlayerObserver* observer) {
 		for (size_t i = 0;i < observerList.size();i++) {
 			if (observerList[i] == observer) {
-				std::vector<Observer*>::iterator it;
+				std::vector<Observer*>::iterator it = observerList.begin();
 				it += i;
 				observer->deregisterPlayer(this);
 				observerList.erase(it);

@@ -51,8 +51,8 @@ void PlayerObserver::registerPlayer(Player* player) {
 void PlayerObserver::deregisterPlayer(Player* player) {
 	for (std::size_t i = 0;i < players.size();i++) {
 		if (players[i] == player) {
-			std::vector<Player*>::iterator playerIt;
-			std::vector<PlayerState>::iterator statesIt;
+			std::vector<Player*>::iterator playerIt = players.begin();
+			std::vector<PlayerState>::iterator statesIt = playerStates.begin();
 			playerIt += i;
 			statesIt += i;
 			players.erase(playerIt);
@@ -81,7 +81,7 @@ void PlayerObserver::attach(Scoreboard* observer) {
 void PlayerObserver::detach(Scoreboard* observer) {
 	for (size_t i = 0;i < observerList.size();i++) {
 		if (observerList[i] == observer) {
-			std::vector<Observer*>::iterator it;
+			std::vector<Observer*>::iterator it = observerList.begin();
 			it += i;
 			observer->deregisterPlayerObserver(this);
 			observerList.erase(it);
