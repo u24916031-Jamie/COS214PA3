@@ -1,6 +1,6 @@
-Jamie King - u24916031
-Rudolph Botha  - u25387023 
-Francois  Venter - u25555202
+Jamie King - u24916031  
+Rudolph Botha  - u25387023  
+Francois  Venter - u25555202  
 
 PGA Championship
 The culmination of the 2026 PGA Tour, featuring the top performing players from throughout the season for an exciting bout to find who will be crowned champion.
