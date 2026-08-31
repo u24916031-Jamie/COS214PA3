@@ -1,0 +1,201 @@
+\doxysection{Event\+Unit Class Reference}
+\hypertarget{classEventUnit}{}\label{classEventUnit}\index{EventUnit@{EventUnit}}
+
+
+Leaf class of Composite Design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Unit.\+h$>$}
+
+
+
+Inheritance diagram for Event\+Unit\+:
+% FIG 0
+
+
+Collaboration diagram for Event\+Unit\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEventUnit_ab27d5dc56286daca65d4709cd4bf8354}\label{classEventUnit_ab27d5dc56286daca65d4709cd4bf8354} 
+{\bfseries Event\+Unit} (int capacity, Event\+Unit\+Type type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\item 
+\Hypertarget{classEventUnit_af67abaabadebef96bbade7bac5318e74}\label{classEventUnit_af67abaabadebef96bbade7bac5318e74} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventUnit_a3ab6906a17a0c102e4669e72148272b5}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets current capacity. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventUnit_a5b6fc70bb0054dcae9274ae562f203fd}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets current number of people in component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_aaff6bd2da88f87864915ee32b50e5cc0}{Handle\+Notification}} (Notifications notif)
+\begin{DoxyCompactList}\small\item\em Handles notifications. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_ab8de607729f9657fc4a93fe3a7f4b81b}{open}} ()
+\begin{DoxyCompactList}\small\item\em handles OPEN order \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_a7680e50ac5ca9bcf04a60dc21d68cefa}{close}} ()
+\begin{DoxyCompactList}\small\item\em handles CLOSE order \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_a4ef7254347e5c4890b716f7abfde6a38}{add\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Adds a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventUnit_aabed60076110ca666d0252020b8656d6}{remove\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Removes a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Event\+Status \mbox{\hyperlink{classEventComponent_a3319a53698841f5a6cc8aa2ae754049a}{report\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a603768917eea3e68931d93e7f1389b80}{set\+Status}} (Event\+Status status)
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_afc29cdeff81c3266b855b985631825b4}{Set\+Player\+Tent}} (\mbox{\hyperlink{classPlayerTent}{Player\+Tent}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Sets player tent for all golf holes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Status {\bfseries status} = CLOSED
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Leaf class of Composite Design pattern. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventUnit_a4ef7254347e5c4890b716f7abfde6a38}\label{classEventUnit_a4ef7254347e5c4890b716f7abfde6a38} 
+\index{EventUnit@{EventUnit}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily virtual void Event\+Unit\+::add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & pointer to new \doxylink{classEventComponent}{Event\+Component} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a9746404945681c21ec0322780f9a9b2f}{Event\+Component}}.
+
+\Hypertarget{classEventUnit_a7680e50ac5ca9bcf04a60dc21d68cefa}\label{classEventUnit_a7680e50ac5ca9bcf04a60dc21d68cefa} 
+\index{EventUnit@{EventUnit}!close@{close}}
+\index{close@{close}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void Event\+Unit\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+handles CLOSE order 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classGolfHole_ab51b5c0d1c115798c1e9d4a8e1d5cbdd}{Golf\+Hole}}.
+
+\Hypertarget{classEventUnit_a3ab6906a17a0c102e4669e72148272b5}\label{classEventUnit_a3ab6906a17a0c102e4669e72148272b5} 
+\index{EventUnit@{EventUnit}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily virtual int Event\+Unit\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets current capacity. 
+
+\begin{DoxyReturn}{Returns}
+int current capacity of component 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{classEventUnit_a5b6fc70bb0054dcae9274ae562f203fd}\label{classEventUnit_a5b6fc70bb0054dcae9274ae562f203fd} 
+\index{EventUnit@{EventUnit}!getSize@{getSize}}
+\index{getSize@{getSize}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily virtual int Event\+Unit\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets current number of people in component. 
+
+\begin{DoxyReturn}{Returns}
+int current number of people in component 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a605b37c42953160d7f5eb5b5d072781e}{Event\+Component}}.
+
+\Hypertarget{classEventUnit_aaff6bd2da88f87864915ee32b50e5cc0}\label{classEventUnit_aaff6bd2da88f87864915ee32b50e5cc0} 
+\index{EventUnit@{EventUnit}!HandleNotification@{HandleNotification}}
+\index{HandleNotification@{HandleNotification}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{HandleNotification()}{HandleNotification()}}
+{\footnotesize\ttfamily virtual void Event\+Unit\+::\+Handle\+Notification (\begin{DoxyParamCaption}\item[{Notifications}]{notif }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handles notifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notif} & Notification to be passed down to all children \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_a7ee01add585ebe6ba3b1155c6c0b0e2e}{Event\+Component}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classGolfHole_a9e425cd8f634f2c8e50da5c71fa7f610}{Golf\+Hole}}.
+
+\Hypertarget{classEventUnit_ab8de607729f9657fc4a93fe3a7f4b81b}\label{classEventUnit_ab8de607729f9657fc4a93fe3a7f4b81b} 
+\index{EventUnit@{EventUnit}!open@{open}}
+\index{open@{open}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual void Event\+Unit\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+handles OPEN order 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classGolfHole_a940c72a442ad0929986d6366bd57b38f}{Golf\+Hole}}.
+
+\Hypertarget{classEventUnit_aabed60076110ca666d0252020b8656d6}\label{classEventUnit_aabed60076110ca666d0252020b8656d6} 
+\index{EventUnit@{EventUnit}!removeComponent@{removeComponent}}
+\index{removeComponent@{removeComponent}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{removeComponent()}{removeComponent()}}
+{\footnotesize\ttfamily virtual void Event\+Unit\+::remove\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Removes a component as a child. Does nothing as \doxylink{classEventUnit}{Event\+Unit}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & pointer to \doxylink{classEventComponent}{Event\+Component} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a4e85c47a85b1ee8bb09b9cf28b5c381c}{Event\+Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Event\+Unit.\+h\end{DoxyCompactItemize}

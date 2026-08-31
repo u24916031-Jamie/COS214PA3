@@ -1,0 +1,49 @@
+digraph "EventFlow"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="EventFlow",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="The objects that appear as lifelines in the sequence diagrams."];
+  Node2 -> Node1 [id="edge27_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" tournament",fontcolor="grey" ];
+  Node2 [id="Node000002",label="EventComponent",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classEventComponent.html",tooltip="Component class of Composite Design pattern."];
+  Node3 -> Node1 [id="edge28_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" course",fontcolor="grey" ];
+  Node3 [id="Node000003",label="GolfCourse",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGolfCourse.html",tooltip="Golf Course."];
+  Node4 -> Node3 [id="edge29_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="EventGroup",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classEventGroup.html",tooltip="Composite class of Composite Design pattern."];
+  Node2 -> Node4 [id="edge30_Node000004_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node1 [id="edge31_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" hole1",fontcolor="grey" ];
+  Node5 [id="Node000005",label="GolfHole",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGolfHole.html",tooltip="Golf hole that is played by player."];
+  Node6 -> Node5 [id="edge32_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="EventUnit",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classEventUnit.html",tooltip="Leaf class of Composite Design pattern."];
+  Node2 -> Node6 [id="edge33_Node000006_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node1 [id="edge34_Node000001_Node000007",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" tent",fontcolor="grey" ];
+  Node7 [id="Node000007",label="PlayerTent",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classPlayerTent.html",tooltip="Area for players to rest between holes and before/after the round."];
+  Node6 -> Node7 [id="edge35_Node000007_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node1 [id="edge36_Node000001_Node000008",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" foodStall",fontcolor="grey" ];
+  Node8 [id="Node000008",label="FoodStall",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classFoodStall.html",tooltip="Shopping Area with Commercial Units."];
+  Node6 -> Node8 [id="edge37_Node000008_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 -> Node1 [id="edge38_Node000001_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" scoreboard1\nscoreboard2",fontcolor="grey" ];
+  Node9 [id="Node000009",label="Scoreboard",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classScoreboard.html",tooltip="Scoreboard class which displays the current tournament standings."];
+  Node6 -> Node9 [id="edge39_Node000009_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node9 [id="edge40_Node000009_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Observer",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classObserver.html",tooltip="Base Observer of Observer Design pattern."];
+  Node11 -> Node1 [id="edge41_Node000001_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" weatherMeter",fontcolor="grey" ];
+  Node11 [id="Node000011",label="WeatherMeter",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classWeatherMeter.html",tooltip="Senses the current state of the weather."];
+  Node6 -> Node11 [id="edge42_Node000011_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node11 [id="edge43_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Subject",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classSubject.html",tooltip="Base Subject of Observer Design pattern."];
+  Node13 -> Node1 [id="edge44_Node000001_Node000013",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" weatherObs",fontcolor="grey" ];
+  Node13 [id="Node000013",label="WeatherObserver",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classWeatherObserver.html",tooltip="Acts as observer to WeatherMeter."];
+  Node10 -> Node13 [id="edge45_Node000013_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 -> Node13 [id="edge46_Node000013_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" subject",fontcolor="grey" ];
+  Node2 -> Node13 [id="edge47_Node000013_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" root",fontcolor="grey" ];
+  Node14 -> Node1 [id="edge48_Node000001_Node000014",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" scottie",fontcolor="grey" ];
+  Node14 [id="Node000014",label="Player",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classPlayer.html",tooltip="Player class that plays golf holes."];
+  Node12 -> Node14 [id="edge49_Node000014_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node15 -> Node1 [id="edge50_Node000001_Node000015",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" manager",fontcolor="grey" ];
+  Node15 [id="Node000015",label="PlayerObserver",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classPlayerObserver.html",tooltip="Acts as an observer to Players, and as Subject to Scoreboards."];
+  Node10 -> Node15 [id="edge51_Node000015_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node15 [id="edge52_Node000015_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

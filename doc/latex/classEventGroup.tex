@@ -1,0 +1,209 @@
+\doxysection{Event\+Group Class Reference}
+\hypertarget{classEventGroup}{}\label{classEventGroup}\index{EventGroup@{EventGroup}}
+
+
+Composite class of Composite Design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Group.\+h$>$}
+
+
+
+Inheritance diagram for Event\+Group\+:
+% FIG 0
+
+
+Collaboration diagram for Event\+Group\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classEventGroup_aa4d48ebe9bacaaed5b172c96b88eca29}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets current capacity. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventGroup_a90f0a4b0454b8fd39a394ca286b13704}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets current number of people in component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventGroup_a16438d25a097008f53018be11cd1e693}{open}} ()
+\begin{DoxyCompactList}\small\item\em handles OPEN order \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventGroup_a19e3dee2612a396a8fabf0367bc868a2}{close}} ()
+\begin{DoxyCompactList}\small\item\em handles CLOSE order \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_ad7ed14117b7343fc12c402405d89537f}{add\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Adds a component as a child. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_a46311ae2b7f4371583e82816a9922792}{remove\+Component}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Removes componenet as child. \end{DoxyCompactList}\item 
+\Hypertarget{classEventGroup_ad3484c18ec03496216d11731b72048f9}\label{classEventGroup_ad3484c18ec03496216d11731b72048f9} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Group} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventGroup_ad1483ed575c5f61b167acf470b9c27c8}{Handle\+Notification}} (Notifications notif)
+\begin{DoxyCompactList}\small\item\em Handles notifications. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventGroup_ac8d28c6ef46d3d70eb9ad556f96c88bd}{Set\+Player\+Tent}} (\mbox{\hyperlink{classPlayerTent}{Player\+Tent}} \texorpdfstring{$\ast$}{*}tent)
+\begin{DoxyCompactList}\small\item\em Sets player tent for all golf holes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Event\+Status \mbox{\hyperlink{classEventComponent_a3319a53698841f5a6cc8aa2ae754049a}{report\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a603768917eea3e68931d93e7f1389b80}{set\+Status}} (Event\+Status status)
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Status {\bfseries status} = CLOSED
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Composite class of Composite Design pattern. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventGroup_ad7ed14117b7343fc12c402405d89537f}\label{classEventGroup_ad7ed14117b7343fc12c402405d89537f} 
+\index{EventGroup@{EventGroup}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily void Event\+Group\+::add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds a component as a child. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & pointer to new \doxylink{classEventComponent}{Event\+Component} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a9746404945681c21ec0322780f9a9b2f}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_a19e3dee2612a396a8fabf0367bc868a2}\label{classEventGroup_a19e3dee2612a396a8fabf0367bc868a2} 
+\index{EventGroup@{EventGroup}!close@{close}}
+\index{close@{close}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void Event\+Group\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+handles CLOSE order 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_aa4d48ebe9bacaaed5b172c96b88eca29}\label{classEventGroup_aa4d48ebe9bacaaed5b172c96b88eca29} 
+\index{EventGroup@{EventGroup}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily virtual int Event\+Group\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets current capacity. 
+
+\begin{DoxyReturn}{Returns}
+int current capacity of component 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_a90f0a4b0454b8fd39a394ca286b13704}\label{classEventGroup_a90f0a4b0454b8fd39a394ca286b13704} 
+\index{EventGroup@{EventGroup}!getSize@{getSize}}
+\index{getSize@{getSize}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily virtual int Event\+Group\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets current number of people in component. 
+
+\begin{DoxyReturn}{Returns}
+int current number of people in component 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a605b37c42953160d7f5eb5b5d072781e}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_ad1483ed575c5f61b167acf470b9c27c8}\label{classEventGroup_ad1483ed575c5f61b167acf470b9c27c8} 
+\index{EventGroup@{EventGroup}!HandleNotification@{HandleNotification}}
+\index{HandleNotification@{HandleNotification}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{HandleNotification()}{HandleNotification()}}
+{\footnotesize\ttfamily virtual void Event\+Group\+::\+Handle\+Notification (\begin{DoxyParamCaption}\item[{Notifications}]{notif }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handles notifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notif} & Notification to be passed down to all children \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_a7ee01add585ebe6ba3b1155c6c0b0e2e}{Event\+Component}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classEntrance_a24d74e41d9fcfdda677bb40b5574b293}{Entrance}}, and \mbox{\hyperlink{classGolfCourse_ac559fc5ff391b014d7ed31a772805110}{Golf\+Course}}.
+
+\Hypertarget{classEventGroup_a16438d25a097008f53018be11cd1e693}\label{classEventGroup_a16438d25a097008f53018be11cd1e693} 
+\index{EventGroup@{EventGroup}!open@{open}}
+\index{open@{open}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual void Event\+Group\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+handles OPEN order 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_a46311ae2b7f4371583e82816a9922792}\label{classEventGroup_a46311ae2b7f4371583e82816a9922792} 
+\index{EventGroup@{EventGroup}!removeComponent@{removeComponent}}
+\index{removeComponent@{removeComponent}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{removeComponent()}{removeComponent()}}
+{\footnotesize\ttfamily void Event\+Group\+::remove\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Removes componenet as child. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & component to remove \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEventComponent_a4e85c47a85b1ee8bb09b9cf28b5c381c}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_ac8d28c6ef46d3d70eb9ad556f96c88bd}\label{classEventGroup_ac8d28c6ef46d3d70eb9ad556f96c88bd} 
+\index{EventGroup@{EventGroup}!SetPlayerTent@{SetPlayerTent}}
+\index{SetPlayerTent@{SetPlayerTent}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{SetPlayerTent()}{SetPlayerTent()}}
+{\footnotesize\ttfamily virtual void Event\+Group\+::\+Set\+Player\+Tent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerTent}{Player\+Tent}} \texorpdfstring{$\ast$}{*}}]{tent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets player tent for all golf holes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tent} & weak tent pointer to be passed to holes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_afc29cdeff81c3266b855b985631825b4}{Event\+Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Event\+Group.\+h\end{DoxyCompactItemize}
