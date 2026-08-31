@@ -1,0 +1,74 @@
+\doxysection{Merch\+Shop Class Reference}
+\hypertarget{class_merch_shop}{}\label{class_merch_shop}\index{MerchShop@{MerchShop}}
+
+
+Merch Shop to buy event merchandise.  
+
+
+
+
+{\ttfamily \+\#include $<$Merch\+Shop.\+h$>$}
+
+
+
+Inheritance diagram for Merch\+Shop:
+% FIG 0
+
+
+Collaboration diagram for Merch\+Shop:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_merch_shop_a06414f20dfb15ad85bc087bdd60eb59c}\label{class_merch_shop_a06414f20dfb15ad85bc087bdd60eb59c} 
+{\bfseries Merch\+Shop} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_merch_shop}{Merch\+Shop}. \end{DoxyCompactList}\item 
+\Hypertarget{class_merch_shop_ab2464cd829dabf3446fd56379a51bf96}\label{class_merch_shop_ab2464cd829dabf3446fd56379a51bf96} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Merch\+Shop} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_unit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Event\+Unit} (int capacity, Event\+Unit\+Type type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_event_unit}{Event\+Unit}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \doxymbox{\hyperlink{class_event_unit_a3ab6906a17a0c102e4669e72148272b5}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets current capacity. \end{DoxyCompactList}\item 
+virtual int \doxymbox{\hyperlink{class_event_unit_a5b6fc70bb0054dcae9274ae562f203fd}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets current number of people in component. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_unit_aaff6bd2da88f87864915ee32b50e5cc0}{Handle\+Notification}} (Notifications notif)
+\begin{DoxyCompactList}\small\item\em Handles notifications. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_unit_ab8de607729f9657fc4a93fe3a7f4b81b}{open}} ()
+\begin{DoxyCompactList}\small\item\em handles OPEN order \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_unit_a7680e50ac5ca9bcf04a60dc21d68cefa}{close}} ()
+\begin{DoxyCompactList}\small\item\em handles CLOSE order \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_unit_a4ef7254347e5c4890b716f7abfde6a38}{add\+Component}} (\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Adds a component as a child. Does nothing as \doxylink{class_event_unit}{Event\+Unit}. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_unit_aabed60076110ca666d0252020b8656d6}{remove\+Component}} (\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Removes a component as a child. Does nothing as \doxylink{class_event_unit}{Event\+Unit}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Event\+Status \doxymbox{\hyperlink{class_event_component_a3319a53698841f5a6cc8aa2ae754049a}{report\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_a603768917eea3e68931d93e7f1389b80}{set\+Status}} (Event\+Status status)
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_afc29cdeff81c3266b855b985631825b4}{Set\+Player\+Tent}} (\doxymbox{\hyperlink{class_player_tent}{Player\+Tent}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Sets player tent for all golf holes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Status {\bfseries status} = CLOSED
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Merch Shop to buy event merchandise. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/\+\+Event\+Units/Merch\+Shop.\+h\end{DoxyCompactItemize}

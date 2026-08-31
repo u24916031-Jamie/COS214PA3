@@ -1,0 +1,96 @@
+\doxysection{Entrance Class Reference}
+\hypertarget{class_entrance}{}\label{class_entrance}\index{Entrance@{Entrance}}
+
+
+\doxylink{class_entrance}{Entrance} to Golf Tournament.  
+
+
+
+
+{\ttfamily \+\#include $<$Entrance.\+h$>$}
+
+
+
+Inheritance diagram for Entrance:
+% FIG 0
+
+
+Collaboration diagram for Entrance:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_entrance_a88cd27875093371afa47ac0f321716d7}\label{class_entrance_a88cd27875093371afa47ac0f321716d7} 
+{\bfseries Entrance} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_entrance}{Entrance}. \end{DoxyCompactList}\item 
+\Hypertarget{class_entrance_afc8b194827df25ba0572541a446979b7}\label{class_entrance_afc8b194827df25ba0572541a446979b7} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Entrance} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_entrance_a24d74e41d9fcfdda677bb40b5574b293}{Handle\+Notification}} (Notifications notif)
+\begin{DoxyCompactList}\small\item\em Handles notifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_group}{Event\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \doxymbox{\hyperlink{class_event_group_aa4d48ebe9bacaaed5b172c96b88eca29}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets current capacity. \end{DoxyCompactList}\item 
+virtual int \doxymbox{\hyperlink{class_event_group_a90f0a4b0454b8fd39a394ca286b13704}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets current number of people in component. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_group_a16438d25a097008f53018be11cd1e693}{open}} ()
+\begin{DoxyCompactList}\small\item\em handles OPEN order \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_group_a19e3dee2612a396a8fabf0367bc868a2}{close}} ()
+\begin{DoxyCompactList}\small\item\em handles CLOSE order \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_group_ad7ed14117b7343fc12c402405d89537f}{add\+Component}} (\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Adds a component as a child. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_group_a46311ae2b7f4371583e82816a9922792}{remove\+Component}} (\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Removes componenet as child. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Group} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_group_ac8d28c6ef46d3d70eb9ad556f96c88bd}{Set\+Player\+Tent}} (\doxymbox{\hyperlink{class_player_tent}{Player\+Tent}} \texorpdfstring{$\ast$}{*}tent)
+\begin{DoxyCompactList}\small\item\em Sets player tent for all golf holes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Event\+Status \doxymbox{\hyperlink{class_event_component_a3319a53698841f5a6cc8aa2ae754049a}{report\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_a603768917eea3e68931d93e7f1389b80}{set\+Status}} (Event\+Status status)
+\begin{DoxyCompactList}\small\item\em Gets current status. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Status {\bfseries status} = CLOSED
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_entrance}{Entrance} to Golf Tournament. 
+
+\label{class_entrance_doc-func-members}
+\Hypertarget{class_entrance_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_entrance_a24d74e41d9fcfdda677bb40b5574b293}\index{Entrance@{Entrance}!HandleNotification@{HandleNotification}}
+\index{HandleNotification@{HandleNotification}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{HandleNotification()}{HandleNotification()}}
+{\footnotesize\ttfamily \label{class_entrance_a24d74e41d9fcfdda677bb40b5574b293} 
+void Entrance::\+\+Handle\+Notification (\begin{DoxyParamCaption}\item[{Notifications}]{notif}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handles notifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notif} & Notification to be passed down to all children \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_event_group_ad1483ed575c5f61b167acf470b9c27c8}{Event\+Group}}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/\+\+Event\+Groups/Entrance.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\doxysection{Golf\+Course.\+h}
+\hypertarget{_golf_course_8h_source}{}\label{_golf_course_8h_source}\index{src/EventGroups/GolfCourse.h@{src/EventGroups/GolfCourse.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GOLFCOURSE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GOLFCOURSE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EventGroup.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}PlayerTent.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_golf_course_a68cbadbb4631d6fa664645cc03ded6bd}{GolfCourse}}\ :\ \textcolor{keyword}{public}\ EventGroup\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{class_golf_course_a68cbadbb4631d6fa664645cc03ded6bd}{GolfCourse}}()\ :\ EventGroup()\ \{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_golf_course_ac559fc5ff391b014d7ed31a772805110}{HandleNotification}}(Notifications\ notif)}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_event_group_ad1483ed575c5f61b167acf470b9c27c8}{EventGroup::HandleNotification}}(notif);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(notif==THUNDER)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ status=CLOSED;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(notif==CLEAR)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ status=OPENED;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_golf_course_a8965cd6386d3871a0261ede9f43b9822}{\string~GolfCourse}}()\ \{\};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

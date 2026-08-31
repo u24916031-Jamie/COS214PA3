@@ -1,0 +1,88 @@
+\doxysection{Player\+Observer Class Reference}
+\hypertarget{class_player_observer}{}\label{class_player_observer}\index{PlayerObserver@{PlayerObserver}}
+
+
+Acts as an observer to Players, and as \doxylink{class_subject}{Subject} to Scoreboards.  
+
+
+
+
+{\ttfamily \+\#include $<$Player\+Observer.\+h$>$}
+
+
+
+Inheritance diagram for Player\+Observer:
+% FIG 0
+
+
+Collaboration diagram for Player\+Observer:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_observer_a5f6a49c0d0d1fac6febad704595d2dd4}\label{class_player_observer_a5f6a49c0d0d1fac6febad704595d2dd4} 
+void {\bfseries sort} ()
+\item 
+\Hypertarget{class_player_observer_a411fc43f865fe9cb6d6b0ded17560a09}\label{class_player_observer_a411fc43f865fe9cb6d6b0ded17560a09} 
+void {\bfseries register\+Player} (\doxymbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\item 
+\Hypertarget{class_player_observer_aca1b2578617c60e81ad9126e16f18b30}\label{class_player_observer_aca1b2578617c60e81ad9126e16f18b30} 
+void {\bfseries deregister\+Player} (\doxymbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\item 
+\Hypertarget{class_player_observer_a36f55c06a017bc707a061b68a7d40c33}\label{class_player_observer_a36f55c06a017bc707a061b68a7d40c33} 
+void {\bfseries attach} (\doxymbox{\hyperlink{class_scoreboard}{Scoreboard}} \texorpdfstring{$\ast$}{*}observer)
+\item 
+\Hypertarget{class_player_observer_a21da67431eeb453653c5db3314bc5244}\label{class_player_observer_a21da67431eeb453653c5db3314bc5244} 
+void {\bfseries detach} (\doxymbox{\hyperlink{class_scoreboard}{Scoreboard}} \texorpdfstring{$\ast$}{*}observer)
+\item 
+void \doxymbox{\hyperlink{class_player_observer_a796719f9e1c5aecc5b97f74fbcefafa4}{update}} ()
+\item 
+\Hypertarget{class_player_observer_a4ef942856fd55a2de099376733ab6ff8}\label{class_player_observer_a4ef942856fd55a2de099376733ab6ff8} 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_player_state}{Player\+State}} $>$ {\bfseries get\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries notify} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_observer_a9eced7e1675f70860c86361aa8382b8e}\label{class_player_observer_a9eced7e1675f70860c86361aa8382b8e} 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_player_state}{Player\+State}} $>$ {\bfseries player\+States}
+\item 
+\Hypertarget{class_player_observer_acf34f025d05aea5d7b58e19ff397bd16}\label{class_player_observer_acf34f025d05aea5d7b58e19ff397bd16} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries players}
+\item 
+\Hypertarget{class_player_observer_af347eaca48aef24e10edc1d51c68b431}\label{class_player_observer_af347eaca48aef24e10edc1d51c68b431} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_scoreboard}{Scoreboard}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries scoreboards}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries observer\+List}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Acts as an observer to Players, and as \doxylink{class_subject}{Subject} to Scoreboards. 
+
+\label{class_player_observer_doc-func-members}
+\Hypertarget{class_player_observer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_observer_a796719f9e1c5aecc5b97f74fbcefafa4}\index{PlayerObserver@{PlayerObserver}!update@{update}}
+\index{update@{update}!PlayerObserver@{PlayerObserver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_player_observer_a796719f9e1c5aecc5b97f74fbcefafa4} 
+void Player\+Observer::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_observer}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/Player\+Observer.\+h\item 
+src/Player\+Observer.\+cpp\end{DoxyCompactItemize}
