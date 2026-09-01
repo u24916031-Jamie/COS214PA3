@@ -12,3 +12,6 @@ To run:
 
 Doxygen:  
 In the docs/html folder open index.html and use the buttons to navigate the doxyfile.
+
+Note:  
+The docs/ folder is called diagrams in this repository
