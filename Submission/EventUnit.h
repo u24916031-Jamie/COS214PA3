@@ -28,6 +28,10 @@ public:
  * @brief Destructor
  * */
 	virtual ~EventUnit() {};
+	/**
+	 * @brief Returns the maximum number of people
+	 * @return int Maximum number of people
+	 */
 	virtual int getCapacity()const {
 		return capacity;
 	}
