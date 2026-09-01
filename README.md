@@ -8,7 +8,7 @@ Players can play golf holes and their score will be tracked. Spectators may visi
 
 To run:  
 -run make in the main directory. This will create and run eventflow in the bin file  
--For fitchfork compliant: Open the submission folder and run make   
+-For fitchfork compliant: Open the submission folder and run make or download prac.zip and run make in it.  
 
 Doxygen:  
-In the docs/html folder open index.html and use the buttons to navigate the doxyfile
+In the docs/html folder open index.html and use the buttons to navigate the doxyfile.
